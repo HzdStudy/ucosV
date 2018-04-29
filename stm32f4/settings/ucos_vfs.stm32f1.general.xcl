@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armjlink2.dll" 
 
-"F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\stm32f1\Exe\ucos_vfs.out" 
+"F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\Out\stm32f1\Exe\ucos_vfs.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
 

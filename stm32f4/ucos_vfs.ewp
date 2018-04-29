@@ -1032,15 +1032,15 @@
                 <debug>1</debug>
                 <option>
                     <name>ExePath</name>
-                    <state>stm32f1\Exe</state>
+                    <state>Out\stm32f1\Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>stm32f1\Obj</state>
+                    <state>Out\stm32f1\Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>stm32f1\List</state>
+                    <state>Out\stm32f1\List</state>
                 </option>
                 <option>
                     <name>GEndianMode</name>
@@ -1653,7 +1653,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>ucos_vfs.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
