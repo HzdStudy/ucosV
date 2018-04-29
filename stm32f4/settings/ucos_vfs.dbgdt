@@ -823,7 +823,7 @@
                     <item>RCC_Clocks</item>
                     <item>tick</item>
                     <item>SystemCoreClock</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
