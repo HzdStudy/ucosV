@@ -1,4 +1,4 @@
-"F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c"
+"F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT\os_dbg.c"
 -std=c11
 -ferror-limit=100
 -I

@@ -2439,8 +2439,74 @@
             </file>
         </group>
     </group>
+    <group>
+        <name>fs</name>
+    </group>
+    <group>
+        <name>ucos</name>
+        <group>
+            <name>config</name>
+            <file>
+                <name>$PROJ_DIR$\ucos\CONFIG\includes.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CONFIG\os_cfg.h</name>
+            </file>
+        </group>
+        <group>
+            <name>core</name>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_core.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_flag.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_mbox.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_mem.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_mutex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_q.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_sem.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_task.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_time.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\CORE\os_tmr.c</name>
+            </file>
+        </group>
+        <group>
+            <name>port</name>
+            <file>
+                <name>$PROJ_DIR$\ucos\PORT\os_cpu.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\PORT\os_cpu_a.asm</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\PORT\os_cpu_c.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\ucos\PORT\os_dbg.c</name>
+            </file>
+        </group>
+    </group>
     <file>
         <name>$PROJ_DIR$\configs.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\DevelopmentLog.txt</name>
     </file>
     <file>
         <name>$PROJ_DIR$\main.c</name>

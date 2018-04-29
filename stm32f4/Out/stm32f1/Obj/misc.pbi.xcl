@@ -10,6 +10,12 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\board
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
@@ -23,6 +29,12 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\STM32F10x_StdPeriph_D
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\board
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8

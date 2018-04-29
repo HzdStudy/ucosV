@@ -3,7 +3,7 @@
 
 void Clock_Config(void)
 { 
-   if (SysTick_Config(SystemCoreClock / 100))
+   if (SysTick_Config(SystemCoreClock / OS_TICKS_PER_SEC))//配置滴答定时器时钟频率
   { 
     /* Capture error */ 
     while (1);
@@ -17,10 +17,11 @@ void Clock_Config(void)
   * @retval None
   */
 
-extern uint32_t tick ;
 void SysTick_Handler(void)
 {
  // TimingDelay_Decrement();
-  tick++;
+  OSIntEnter();		//进入中断
+  OSTimeTick();       //调用ucos的时钟服务程序
+  OSIntExit();        //触发任务切换软中断
 }
 
