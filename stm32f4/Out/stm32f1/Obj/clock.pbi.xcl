@@ -16,6 +16,10 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\fs\vfs\include
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\include
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
@@ -35,6 +39,10 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\fs\vfs\include
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8

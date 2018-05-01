@@ -1361,6 +1361,9 @@
                     <state>$PROJ_DIR$\ucos\CONFIG</state>
                     <state>$PROJ_DIR$\ucos\CORE</state>
                     <state>$PROJ_DIR$\ucos\PORT</state>
+                    <state>$PROJ_DIR$\fs\vfs\include</state>
+                    <state>$PROJ_DIR$\fs\fs\devfs</state>
+                    <state>$PROJ_DIR$\drivers\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2042,6 +2045,9 @@
         <name>bsp</name>
         <group>
             <name>stm32f1</name>
+            <excluded>
+                <configuration>stm32f4</configuration>
+            </excluded>
             <group>
                 <name>board</name>
                 <file>
@@ -2165,7 +2171,49 @@
         </group>
     </group>
     <group>
+        <name>drivers</name>
+        <group>
+            <name>serial</name>
+            <file>
+                <name>$PROJ_DIR$\drivers\serial\serial.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>fs</name>
+        <group>
+            <name>fs</name>
+            <group>
+                <name>devfs</name>
+                <file>
+                    <name>$PROJ_DIR$\fs\fs\devfs\console.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\fs\fs\devfs\devfs.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\fs\fs\devfs\devfs.h</name>
+                </file>
+            </group>
+        </group>
+        <group>
+            <name>vfs</name>
+            <file>
+                <name>$PROJ_DIR$\fs\vfs\src\dfs.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\fs\vfs\src\dfs_device.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\fs\vfs\src\dfs_file.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\fs\vfs\src\dfs_fs.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\fs\vfs\src\dfs_posix.c</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>ucos</name>
