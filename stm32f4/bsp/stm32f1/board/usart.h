@@ -6,7 +6,27 @@
 #include "serial.h"
 
 
-#define RT_USING_UART1
+#define USING_UART1
+
+#define SERIAL1_RB_BUFSZ              64
+#define SERIAL2_RB_BUFSZ              64
+#define SERIAL3_RB_BUFSZ              64
+#define SERIAL4_RB_BUFSZ              64
+
+/* Default config for serial_configure structure */
+#define SERIAL_CONFIG_DEFAULT           \
+{                                          \
+    BAUD_RATE_115200, /* 115200 bits/s */  \
+    DATA_BITS_8,      /* 8 databits */     \
+    STOP_BITS_1,      /* 1 stopbit */      \
+    PARITY_NONE,      /* No parity  */     \
+    BIT_ORDER_LSB,    /* LSB first sent */ \
+    NRZ_NORMAL,       /* Normal mode */    \
+    0,                /* Buffer size */  \
+    0                                      \
+}
+
+
 
 #define UART_ENABLE_IRQ(n)            NVIC_EnableIRQ((n))
 #define UART_DISABLE_IRQ(n)           NVIC_DisableIRQ((n))

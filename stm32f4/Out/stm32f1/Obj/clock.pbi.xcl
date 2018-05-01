@@ -10,15 +10,17 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\board
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\Include
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
-F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\fs\vfs\include
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I
-F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\include
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\_driverInterface
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
@@ -34,15 +36,17 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\board
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\Include
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
-F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\fs\vfs\include
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I
-F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\include
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\_driverInterface
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8

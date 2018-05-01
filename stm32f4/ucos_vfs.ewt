@@ -2442,47 +2442,26 @@
     <group>
         <name>drivers</name>
         <group>
+            <name>_deviceInterface</name>
+            <file>
+                <name>$PROJ_DIR$\drivers\_driverInterface\deviceInterface.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\drivers\_driverInterface\deviceInterface.h</name>
+            </file>
+        </group>
+        <group>
             <name>serial</name>
             <file>
                 <name>$PROJ_DIR$\drivers\serial\serial.c</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\drivers\serial\serial.h</name>
+            </file>
         </group>
     </group>
     <group>
-        <name>fs</name>
-        <group>
-            <name>fs</name>
-            <group>
-                <name>devfs</name>
-                <file>
-                    <name>$PROJ_DIR$\fs\fs\devfs\console.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\fs\fs\devfs\devfs.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\fs\fs\devfs\devfs.h</name>
-                </file>
-            </group>
-        </group>
-        <group>
-            <name>vfs</name>
-            <file>
-                <name>$PROJ_DIR$\fs\vfs\src\dfs.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\fs\vfs\src\dfs_device.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\fs\vfs\src\dfs_file.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\fs\vfs\src\dfs_fs.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\fs\vfs\src\dfs_posix.c</name>
-            </file>
-        </group>
+        <name>include</name>
     </group>
     <group>
         <name>ucos</name>

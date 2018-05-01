@@ -1,6 +1,5 @@
 #include "configs.h"
 #include "includes.h" 	 
-#include "dfs_posix.h"
 
 RCC_ClocksTypeDef RCC_Clocks;
 
@@ -23,9 +22,8 @@ void print_task(void *pdata);
 OS_STK PRINT2_TASK_STK[PRINT2_STK_SIZE];
 void print2_task(void *pdata);
 
-rt_device_t uart_device = RT_NULL;
+device_t uart_device = NULL;
 
-int32_t uart_fd = -1;
 
 int main(void)
 {
@@ -33,16 +31,10 @@ int main(void)
   
 //  USART_Config(115200);
   rt_hw_usart_init();
-
-  dfs_init();//
-  devfs_init();
-  if(dfs_mount("uart1", "/dev", "devfs", 0, 0) == 0)
-  	printf("Ok");
-  else
-  	printf("Fail");
-
-  uart_fd = open("/dev/uart1", O_RDWR, 0x00);
   
+  uart_device = device_find("uart1");
+  device_open(uart_device, DEVICE_OFLAG_RDWR);
+    
   printf("\n\rUSART Printf Example: retarget the C library printf function to the USART\n\r");
 
   OSInit();  	 			//³õÊ¼»¯ucosII			  
@@ -87,9 +79,8 @@ void print2_task(void *pdata)
 
 int fputc(int ch, FILE *f) 
 { 
-	if(uart_fd > 0)
-		write(uart_fd, &ch, 1);
-    
+	if(uart_device != NULL)
+      device_write(uart_device, 0, &ch, 1);
     return ch;
 } 
 
