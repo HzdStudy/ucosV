@@ -1,5 +1,5 @@
 #include "deviceInterface.h"
-
+#if 0
 #define _OBJ_CONTAINER_LIST_INIT(c)     \
     {&(object_container[c].object_list), &(object_container[c].object_list)}
 struct object_information object_container[Object_Class_Unknown] =
@@ -7,6 +7,11 @@ struct object_information object_container[Object_Class_Unknown] =
 	/* initialize object container - device */
     {Object_Class_Device, _OBJ_CONTAINER_LIST_INIT(Object_Class_Device), sizeof(struct device)},
 };
+
+#endif
+
+static list_t     device_list;              /**< object list */
+
 
 
 /**
@@ -17,35 +22,16 @@ struct object_information object_container[Object_Class_Unknown] =
  * @param type the object type.
  * @param name the object name. In system, the object's name must be unique.
  */
-void object_init(struct object         *object,
-                    enum object_class_type type,
-                    const char               *name)
+static void device_listadd(struct object         *object,
+                                const char               *name)
 {
     register base_t temp;
-    struct object_information *information;
-
-    /* get object information */
-    information = &object_container[type];
-
-    /* initialize object's parameters */
-
-    /* set object type to static */
-    object->type = type | Object_Class_Static;
 
     /* copy name */
     strcpy(object->name, name);
 
-	//ucos移植最简单的，不需要hook
-    //OBJECT_HOOK_CALL(object_attach_hook, (object));
-
-    /* lock interrupt */
-    //temp = hw_interrupt_disable();
-
     /* insert object into information object list */
-    list_insert_after(&(information->object_list), &(object->list));
-
-    /* unlock interrupt */
-    //hw_interrupt_enable(temp);
+    list_insert_after(&(device_list), &(object->list));
 }
 
 
@@ -55,7 +41,7 @@ void object_init(struct object         *object,
  *
  * @param object the specified object to be detached.
  */
-void object_detach(object_t object)
+static void device_detach(object_t object)
 {
     register base_t temp;
 
@@ -84,7 +70,7 @@ err_t device_register(device_t dev,
     if (device_find(name) != NULL)
         return -ERROR;
 
-    object_init(&(dev->parent), Object_Class_Device, name);
+    device_listadd(&(dev->parent), name);
     dev->flag = flags;
     dev->ref_count = 0;
 
@@ -101,7 +87,7 @@ err_t device_register(device_t dev,
 err_t device_unregister(device_t dev)
 {
 
-    object_detach(&(dev->parent));
+    device_detach(&(dev->parent));
 
     return EOK;
 }
@@ -310,18 +296,14 @@ device_t device_find(const char *name)
 {
     struct object *object;
     struct list_node *node;
-    struct object_information *information;
-
-    extern struct object_information object_container[];
 
     /* enter critical */
     //if (thread_self() != NULL)
     //    enter_critical();
 
     /* try to find device object */
-    information = &object_container[Object_Class_Device];
-    for (node  = information->object_list.next;
-         node != &(information->object_list);
+    for (node  = device_list.next;
+         node != &(device_list);
          node  = node->next)
     {
         object = list_entry(node, struct object, list);
@@ -374,6 +356,18 @@ err_t device_init(device_t dev)
     }
 
     return result;
+}
+
+/**
+ * This function will Initialize the linked list
+ *
+ * @param  None
+ *
+ * @return None
+ */
+void device_listInit(void)
+{
+	list_init(&device_list);
 }
 
 

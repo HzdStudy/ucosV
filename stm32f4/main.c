@@ -7,35 +7,52 @@ RCC_ClocksTypeDef RCC_Clocks;
 extern  uint32_t SystemCoreClock;
 
 #define START_TASK_PRIO      			10 
-#define START_STK_SIZE  				128
+#define START_STK_SIZE  				64
 OS_STK START_TASK_STK[START_STK_SIZE];
 void start_task(void *pdata);	
 
 
 #define PRINT_TASK_PRIO       			7 
-#define PRINT_STK_SIZE  		   		128
+#define PRINT_STK_SIZE  		   		64
 OS_STK PRINT_TASK_STK[PRINT_STK_SIZE];
 void print_task(void *pdata);
 
 #define PRINT2_TASK_PRIO       			6 
-#define PRINT2_STK_SIZE  		    	128
+#define PRINT2_STK_SIZE  		    	64
 OS_STK PRINT2_TASK_STK[PRINT2_STK_SIZE];
 void print2_task(void *pdata);
 
 device_t uart_device = NULL;
-
+device_t pin_devic   = NULL;
 
 int main(void)
 {
+  struct device_pin_status  _pin_status;
+    
   Clock_Config();
+  
+  device_listInit();
   
 //  USART_Config(115200);
   rt_hw_usart_init();
-  
+  stm32_hw_pin_init();
+
+
+
   uart_device = device_find("uart1");
-  device_open(uart_device, DEVICE_OFLAG_RDWR);
+  if(uart_device != NULL)//不加也可以，下层接口对设备做了判断
+    device_open(uart_device, DEVICE_OFLAG_RDWR);
     
-  printf("\n\rUSART Printf Example: retarget the C library printf function to the USART\n\r");
+  printf("\r\nUSART Printf Example: retarget the C library printf function to the USART\r\n");
+  
+  pin_devic = device_find("pin");
+  if(pin_devic != NULL)
+    device_open(pin_devic, DEVICE_OFLAG_RDWR);
+  _pin_status.pin = 20;//PA4
+  _pin_status.status =  PIN_LOW;
+  device_write(pin_devic, 0, &_pin_status, sizeof(_pin_status));
+  
+  
 
   OSInit();  	 			//初始化ucosII			  
   OSTaskCreate(start_task,(void *)0,(OS_STK *)&START_TASK_STK[START_STK_SIZE-1],START_TASK_PRIO );//创建起始任务

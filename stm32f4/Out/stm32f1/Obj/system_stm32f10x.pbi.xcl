@@ -18,6 +18,8 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\misc
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\_driverInterface
@@ -43,6 +45,8 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CONFIG
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\misc
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I

@@ -39,6 +39,7 @@ struct list_node
 };
 typedef struct list_node list_t;                  /**< Type for lists. */
 
+long list(void);
 
 /**
  * @addtogroup KernelService

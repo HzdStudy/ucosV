@@ -303,74 +303,25 @@ typedef struct semaphore *sem_t;
 #define EIO                          8               /**< IO error */
 
 
-/**
- *  The object type can be one of the follows with specific
- *  macros enabled:
- *  - Thread
- *  - Semaphore
- *  - Mutex
- *  - Event
- *  - MailBox
- *  - MessageQueue
- *  - MemHeap
- *  - MemPool
- *  - Device
- *  - Timer
- *  - Module
- *  - Unknown
- *  - Static
- */
-enum object_class_type
-{
-    Object_Class_Device = 0, 					     /**< The object is a device */
-    Object_Class_Unknown,                            /**< The object is unknown. */
-    Object_Class_Static = 0x80                       /**< The object is a static object. */
-};
-
-
-
-/**
- * The information of the kernel object
- */
-struct object_information
-{
-    enum object_class_type type;                     /**< object class type */
-    list_t                 object_list;              /**< object list */
-    size_t                 object_size;              /**< object size */
-};
-
-long list(void);
-
-/**
- * @brief get the struct for this entry
- * @param node the entry point
- * @param type the type of structure
- * @param member the name of list in structure
- */
-#define list_entry(node, type, member) \
-    ((type *)((char *)(node) - (unsigned long)(&((type *)0)->member)))
-
-
-
 //函数接口
-
-err_t device_register(device_t dev,
+err_t    device_register(device_t dev,
                             const char *name,
                             uint16_t flags);
-err_t device_unregister(device_t dev);
-err_t device_open(device_t dev, uint16_t oflag);
-err_t device_close(device_t dev);
-size_t device_read(device_t dev,
+err_t    device_unregister(device_t dev);
+err_t    device_open(device_t dev, uint16_t oflag);
+err_t    device_close(device_t dev);
+size_t   device_read(device_t dev,
                          off_t    pos,
                          void       *buffer,
                          size_t   size);
-size_t device_write(device_t dev,
+size_t   device_write(device_t dev,
                           off_t    pos,
                           const void *buffer,
                           size_t   size);
-err_t device_control(device_t dev, uint8_t cmd, void *arg);
+err_t    device_control(device_t dev, uint8_t cmd, void *arg);
 device_t device_find(const char *name);
-err_t device_init(device_t dev);
+err_t    device_init(device_t dev);
+void     device_listInit(void);
 
 
 
