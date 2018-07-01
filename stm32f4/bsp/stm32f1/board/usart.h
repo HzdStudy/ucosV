@@ -7,6 +7,10 @@
 
 
 #define USING_UART1
+#define USING_UART2
+#define USING_UART3
+
+
 
 #define SERIAL1_RB_BUFSZ              64
 #define SERIAL2_RB_BUFSZ              64

@@ -6,7 +6,7 @@
 #include "includes.h" 	
 
 
-extern void Clock_Config(void);
+
 
 
 #endif

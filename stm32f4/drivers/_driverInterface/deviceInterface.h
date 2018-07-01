@@ -3,12 +3,13 @@
 
 #include "list.h"
 #include "stdint.h"
+#include "stdio.h"
 #include "ysizet.h"
 
 #define USING_DEVICE              //使用RT 设备驱动驱动
 #define NAME_MAX	              32
 
-#define NULL                      (0)
+//#define NULL                      (0)
 
 /* RT-Thread basic data type definitions */
 //typedef signed   char                   int8_t;      /**<  8bit integer type */

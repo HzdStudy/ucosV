@@ -2,6 +2,8 @@
 -std=c11
 -ferror-limit=100
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\CMSIS\CM3\CoreSupport
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\STM32F10x_StdPeriph_Driver\inc
@@ -18,11 +20,23 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\device\gsm
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\device\gsm\GsmModules\U201
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\misc
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\_driverInterface
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task\debug_task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task\uart_task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\pro\gsm
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
@@ -30,6 +44,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\CMSIS\CM3\CoreSupport
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\bsp\stm32f1\Libraries\STM32F10x_StdPeriph_Driver\inc
@@ -46,11 +62,23 @@ F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\CORE
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\ucos\PORT
 -I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\device\gsm
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\device\gsm\GsmModules\U201
+-I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\misc
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\serial
 -I
 F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\drivers\_driverInterface
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task\debug_task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\app\task\uart_task
+-I
+F:\RTOS\11_ucos-Vfs\1_源码\stm32f4\pro\gsm
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8
